@@ -1,0 +1,17 @@
+lane :list_apps do
+  galaxy_store_developer_list
+end
+
+lane :upload_app do |options|
+  galaxy_store_developer_upload(
+      file_path: options[:file_path]
+  )
+end
+
+lane :submit_app do
+  galaxy_store_developer_submit
+end
+
+lane :app_info do
+  galaxy_store_developer_info
+end
